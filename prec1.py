@@ -1,4 +1,6 @@
-Secret_Num = 7
+import random
+
+Secret_Num = random.randint(1,20)
 user = int(input("Guess the secret number : "))
 
 while user!= Secret_Num:
