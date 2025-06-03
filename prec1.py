@@ -1,5 +1,8 @@
-num = 10
+num = int(input("Enter Your Number : "))
 
-while num >= 1:
-    print(num)
-    num -= 1
+fact = 1
+
+while num>0:
+    fact*=num
+    print (fact)
+    num -=1 
