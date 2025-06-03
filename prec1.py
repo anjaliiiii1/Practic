@@ -1,8 +1,8 @@
-num = int(input("Enter Your Number : "))
+Secret_Num = 7
+user = int(input("Guess the secret number : "))
 
-fact = 1
+while user!= Secret_Num:
+    user = int(input("try a : "))
 
-while num>0:
-    fact*=num
-    print (fact)
-    num -=1 
+print("Congratulations!")
+    
