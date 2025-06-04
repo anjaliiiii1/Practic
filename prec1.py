@@ -1,29 +1,35 @@
 import random
 import time
-Secret_Num = random.randint(1,20)
 
-attempts = 0
+num = random.randint(1,20)
+attampt = 0
+max_attampt = 3
+guesses = []
 
-un_attempts = 3
+print("🎮 Welcome to the Guessing Game!")
+time.sleep(1)
+print("I am Thinking.. the number Between 1 to 20......")
+time.sleep(1)
 
-gusses = []
+while max_attampt > attampt:
+    guess = int(input("Guess the number : "))
+    guesses.append(guess)
+    attampt += 1
 
-while attempts < un_attempts:
+    if guess == num:
+        print(f"🎉 Congratulations! You won in {attampt} tries.")
+        break
 
-    user = int(input("Guess the secret number : "))
-    gusses.append(user)
-    attempts +=1
-    if Secret_Num == user:
-        print(f"Congratulations! you won at {attempts}tris.")
-        break;
-    
-    elif user > Secret_Num:
-        print("Too High")
+    elif num > guess:
+        print("Too Low.....")
         time.sleep(0.05)
 
-    else:
-        print ("too low")
-print("Your guesses number were",user)
-print("Game Over The correct number is : ", Secret_Num)
+    else :
+        print("🔺 Too High!")
+        time.sleep(0.05)
 
-    
+if guess != num:
+    print("\n❌ Game Over!")
+
+print("📋 Your guesses were:", guesses)
+print("✅ The correct number was:", num)
