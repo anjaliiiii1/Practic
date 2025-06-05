@@ -1,35 +1,14 @@
-import random
-import time
+total = 0
 
-num = random.randint(1,20)
-attampt = 0
-max_attampt = 3
-guesses = []
+print("Erter the number continusely once you was tthe sto enter the O")
+user = int(input("Enter the number : "))
 
-print("🎮 Welcome to the Guessing Game!")
-time.sleep(1)
-print("I am Thinking.. the number Between 1 to 20......")
-time.sleep(1)
+while user != 0:
+    
+    total +=user
+    user = int(input("Enter the number : "))
+   
+   
+print("Your total Sum of number is : ", total)
 
-while max_attampt > attampt:
-    guess = int(input("Guess the number : "))
-    guesses.append(guess)
-    attampt += 1
 
-    if guess == num:
-        print(f"🎉 Congratulations! You won in {attampt} tries.")
-        break
-
-    elif num > guess:
-        print("Too Low.....")
-        time.sleep(0.05)
-
-    else :
-        print("🔺 Too High!")
-        time.sleep(0.05)
-
-if guess != num:
-    print("\n❌ Game Over!")
-
-print("📋 Your guesses were:", guesses)
-print("✅ The correct number was:", num)
