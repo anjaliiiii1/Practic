@@ -10,5 +10,6 @@ while user != 0:
    
    
 print("Your total Sum of number is : ", total)
+print("Thank you for using the program")
 
 
